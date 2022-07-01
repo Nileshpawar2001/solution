@@ -1,0 +1,27 @@
+# anagram and palindrome
+# input_1 = cdcdcdcdeeeef
+# output_1 = 1
+
+# check wheteher the anagram(any combination of provided string) is palindrome or not if it's true print 1  and slese print 0
+
+s=input()
+counter=[]
+palindrome=[]
+another=[]
+for i in range(len(s)):
+    x = s.count(s[i])
+    counter.append(x)   
+print(counter)
+for j in range(len(counter)):
+    if(counter[j] % 2 == 0 ):
+        palindrome.append(j)
+    else:
+        another.append(j)
+        
+if(len(another)== 1):
+    print("1")
+    
+elif(len(another)== 0):
+    print("1")
+else:
+    print("0")
