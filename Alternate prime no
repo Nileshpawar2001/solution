@@ -1,0 +1,28 @@
+# Alternating prime no
+# input = 6 1 3 4 6 8 10
+# output = 11 ==> here is the sum of lowest non prime no
+
+
+
+n=int(input())
+arr=[]
+sum=0
+non_prime=[]
+for i in range(n):
+    temp = int(input())
+    arr.append(temp)
+print(arr)
+
+for j in arr:
+    if(j>1):
+        for k in range(2,j):
+            if(j%k==0):
+                non_prime.append(j)
+                break
+            else:
+                arr.remove(j)
+                break
+arr.sort
+for s in range(len(arr)-2):
+    sum = sum + arr[s]
+print(sum)
